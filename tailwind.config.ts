@@ -1,10 +1,14 @@
-import type { Config } from "tailwindcss";
+// Import Tailwind CSS plugin and configuration
+const { nextui } = require('@nextui-org/theme');
+const daisyui = require('daisyui');
+const { Config } = require("tailwindcss");
 
-const config: Config = {
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/components/(calendar|button|ripple|spinner).js"
   ],
   theme: {
     extend: {
@@ -15,6 +19,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+    nextui(),
+    // other plugins...
+  ],
 };
-export default config;
+
+module.exports = config;
