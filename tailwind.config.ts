@@ -1,3 +1,5 @@
+import { colors } from "@nextui-org/theme";
+
 // Import Tailwind CSS plugin and configuration
 const { nextui } = require('@nextui-org/theme');
 const daisyui = require('daisyui');
@@ -17,6 +19,7 @@ const config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      
     },
   },
   plugins: [
@@ -24,6 +27,7 @@ const config = {
     nextui(),
     // other plugins...
   ],
+
 };
 
 module.exports = config;

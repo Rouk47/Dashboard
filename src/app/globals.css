@@ -1,4 +1,5 @@
 /* globals.css */
+
 /* Example: Using daisyui classes in globals.css */
 @import 'daisyui/dist/full.css';
 @tailwind base;
@@ -6,3 +7,84 @@
 @tailwind utilities;
 
 /* Your custom CSS styles or additional imports go below */
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --navbar-bg: #ffffff;
+    --navbar-text: #000000;
+    --dropdown-bg: #ffffff;
+    --dropdown-text: #000000;
+    --button-bg: #e2e8f0;
+    --button-text: #1a202c;
+    --icon-color: #02afff;
+}
+
+.dark {
+    --bg-color: #1a202c;
+    --text-color: #ffffff;
+    --navbar-bg: #2d3748;
+    --navbar-text: #ffffff;
+    --dropdown-bg: #2d3748;
+    --dropdown-text: #ffffff;
+    --button-bg: #4a5568;
+    --button-text: #ffffff;
+    --icon-color: #02afff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+}
+
+.dropdown-content {
+    background-color: var(--dropdown-bg);
+    color: var(--dropdown-text);
+}
+
+svg {
+    color: var(--icon-color);
+}
+
+body.light {
+    --text-primary: var(--text-primary-light);
+}
+
+body.dark {
+    --text-primary: var(--text-primary-dark);
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+/* Dark theme specific styles */
+body.dark {
+    --text-primary: var(--text-primary-dark);
+}
+
+.stats {
+    background-color: var(--dropdown-bg);
+    color: var(--dropdown-text);
+}
+
+.stat-desc {
+    color: var(--dropdown-text);
+}
+
+.stat {
+    color: var(--dropdown-text);
+}
+
+.row-start-1 {
+    background-color: var(--dropdown-bg);
+    color: var(--dropdown-text);
+}
+
+.labels {
+    color: var(--dropdown-text);
+}
